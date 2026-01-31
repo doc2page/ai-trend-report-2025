@@ -1,88 +1,81 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content="pandoc" />
   <title>AI 创业趋势研究报告 2025 全年</title>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS + Typography 插件 -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 
   <!-- Tailwind 配置 -->
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
-        extend: {
-          colors: {
-            primary: {
-              50: '#eff6ff',
-              100: '#dbeafe',
-              200: '#bfdbfe',
-              300: '#93c5fd',
-              400: '#60a5fa',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-              800: '#1e40af',
-              900: '#1e3a8a',
-              950: '#172554',
-            },
-            accent: {
-              50: '#ecfeff',
-              100: '#cffafe',
-              200: '#a5f3fc',
-              300: '#67e8f9',
-              400: '#22d3ee',
-              500: '#06b6d4',
-              600: '#0891b2',
-              700: '#0e7490',
-              800: '#155e75',
-              900: '#164e63',
-              950: '#083344',
-            },
-          secondary: {
-              50: '#f5f3ff',
-              100: '#ede9fe',
-              200: '#ddd6fe',
-              300: '#c4b5fd',
-              400: '#a78bfa',
-              500: '#8b5cf6',
-              600: '#7c3aed',
-              700: '#6d28d9',
-              800: '#5b21b6',
-              900: '#4c1d95',
-              950: '#2e1065',
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.6s ease-out',
-            'slide-up': 'slideUp 0.6s ease-out',
-            'slide-in-right': 'slideInRight 0.4s ease-out',
-            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: '0' },
-              '100%': { opacity: '1' },
-            },
-            slideUp: {
-              '0%': { opacity: '0', transform: 'translateY(20px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            },
-            slideInRight: {
-              '0%': { opacity: '0', transform: 'translateX(-20px)' },
-              '100%': { opacity: '1', transform: 'translateX(0)' },
-            },
-          },
+    extend: {
+      colors: {
+        primary: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
+        },
+        accent: {
+          50: '#ecfeff',
+          100: '#cffafe',
+          200: '#a5f3fc',
+          300: '#67e8f9',
+          400: '#22d3ee',
+          500: '#06b6d4',
+          600: '#0891b2',
+          700: '#0e7490',
+          800: '#155e75',
+          900: '#164e63',
+          950: '#083344',
+        },
+        secondary: {
+          50: '#f5f3ff',
+          100: '#ede9fe',
+          200: '#ddd6fe',
+          300: '#c4b5fd',
+          400: '#a78bfa',
+          500: '#8b5cf6',
+          600: '#7c3aed',
+          700: '#6d28d9',
+          800: '#5b21b6',
+          900: '#4c1d95',
+          950: '#2e1065',
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
-    }
+    },
+  },
   </script>
 
   <!-- 字体 -->
@@ -93,102 +86,14 @@
   <!-- 代码高亮 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .text-balance {
-        text-wrap: balance;
-      }
-      .text-pretty {
-        text-wrap: pretty;
-      }
-    }
-  </style>
-
-  <style>
-    body {
-      font-family: 'Inter', 'Noto Sans SC', sans-serif;
-    }
-
-    /* 阅读进度条 */
-    #progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
-      z-index: 9999;
-      transition: width 0.1s ease;
-    }
-
-    /* 平滑滚动 */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* TOC 网格 */
-    .toc-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.5rem;
-    }
-
-    @media (min-width: 640px) {
-      .toc-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .toc-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    /* 表格样式 */
-    .modern-table {
-      border-collapse: separate;
-      border-spacing: 0;
-    }
-
-    .modern-table th {
-      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-    }
-
-    .modern-table tr:nth-child(even) {
-      background: rgba(30, 58, 138, 0.1);
-    }
-
-    .modern-table tr:hover {
-      background: rgba(59, 130, 246, 0.1);
-    }
-
-    /* 引用块渐变 */
-    .quote-card {
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-      border-left: 4px solid;
-      border-image: linear-gradient(180deg, #3b82f6, #8b5cf6) 1;
-    }
-
-    /* 打印样式 */
-    @media print {
-      .no-print {
-        display: none !important;
-      }
-      body {
-        background: white !important;
-        color: black !important;
-      }
-    }
-  </style>
 </head>
 
-<body class="bg-slate-950 text-slate-200 antialiased">
-  <!-- 阅读进度条 -->
-  <div id="progress-bar" class="w-0"></div>
+<body class="bg-slate-950 text-slate-200 antialiased min-h-screen">
+  <!-- 进度条 -->
+  <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 z-50" style="width: 0%"></div>
 
   <!-- 主题切换按钮 -->
-  <button id="theme-toggle" class="no-print fixed top-4 right-4 z-50 p-2 rounded-full bg-slate-800/80 backdrop-blur-sm border border-slate-700 hover:bg-slate-700 transition-all duration-300 hover:scale-110">
+  <button id="theme-toggle" class="no-print fixed top-4 right-4 z-50 p-2 rounded-full bg-slate-800/80 backdrop-blur-sm border border-slate-700 hover:bg-slate-700 transition-all hover:scale-110 shadow-lg">
     <svg id="moon-icon" class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
     </svg>
@@ -198,20 +103,19 @@
   </button>
 
   <!-- 回到顶部按钮 -->
-  <button id="back-to-top" class="no-print fixed bottom-6 right-6 z-50 p-3 rounded-full bg-primary/80 backdrop-blur-sm border border-primary-600 text-white shadow-lg shadow-primary/20 hover:bg-primary hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 opacity-0 invisible">
+  <button id="back-to-top" class="no-print fixed bottom-6 right-6 z-50 p-3 rounded-full bg-primary/90 backdrop-blur-sm border border-primary-600 text-white shadow-lg transition-all duration-300 opacity-0 invisible translate-y-4 hover:scale-110">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
     </svg>
   </button>
 
-  <div class="min-h-screen">
+  <div>
     <!-- Hero 区域 -->
     <header class="relative overflow-hidden">
-      <!-- 背景装饰 -->
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary/20 rounded-full blur-3xl"></div>
-        <div class="absolute top-20 left-1/2 w-60 h-60 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
       </div>
 
       <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
@@ -221,21 +125,15 @@
         </div>
 
         <!-- 标题 -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 mb-6 animate-slide-up text-balance">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 mb-6 animate-slide-up">
           AI 创业趋势研究报告 2025 全年
         </h1>
 
         <!-- 副标题 -->
-                <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-8 animate-slide-up" style="animation-delay: 0.1s">
-          2025 年是 AI 从"对话"到"执行"的转折之年
-        </p>
-        
-        <!-- Hero Cards -->
-        <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto animate-slide-up" style="animation-delay: 0.2s">
-          <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700">
-            <div class="text-2xl font-bold text-primary"></div>
-            <div class="text-xs text-slate-500"></div>
-          </div>
+        <div id="subtitle-container" class="hidden">
+          <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-8 animate-slide-up" style="animation-delay: 0.1s">
+            <span id="subtitle-text"></span>
+          </p>
         </div>
       </div>
     </header>
@@ -268,8 +166,7 @@
       </nav>
       
       <!-- 正文内容 -->
-      <div class="prose prose-lg prose-invert max-w-none animate-fade-in">
-        <h1 id="ai-创业趋势研究报告-2025-全年">AI 创业趋势研究报告 2025 全年</h1>
+      <div id="prose-content" class="prose prose-lg prose-invert max-w-none animate-fade-in">
         <blockquote class="meta-info">
         <p><strong>报告类型</strong>：年度趋势预测报告 <strong>研究周期</strong>：2025-01-01 至 2025-12-31（预测） <strong>Skill 版本</strong>：v2.3.0 <strong>生成时间</strong>：2025-01-31</p>
         </blockquote>
@@ -1343,47 +1240,74 @@
     const html = document.documentElement;
 
     // 初始化主题
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem('doc2page-theme') || 'dark';
     html.setAttribute('data-theme', savedTheme);
     updateThemeIcons(savedTheme);
 
     themeToggle.addEventListener('click', () => {
-      const isDark = html.getAttribute('data-theme') === 'dark';
-      const newTheme = isDark ? 'light' : 'dark';
+      const currentTheme = html.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
+      localStorage.setItem('doc2page-theme', newTheme);
       updateThemeIcons(newTheme);
     });
 
     function updateThemeIcons(theme) {
+      const proseContent = document.getElementById('prose-content');
       if (theme === 'dark') {
         moonIcon.classList.remove('hidden');
         sunIcon.classList.add('hidden');
+        document.body.classList.remove('bg-gray-50', 'text-gray-900');
+        document.body.classList.add('bg-slate-950', 'text-slate-200');
+        if (proseContent) {
+          proseContent.classList.remove('prose-gray');
+          proseContent.classList.add('prose-invert');
+        }
       } else {
         moonIcon.classList.add('hidden');
         sunIcon.classList.remove('hidden');
+        document.body.classList.remove('bg-slate-950', 'text-slate-200');
+        document.body.classList.add('bg-gray-50', 'text-gray-900');
+        if (proseContent) {
+          proseContent.classList.remove('prose-invert');
+          proseContent.classList.add('prose-gray');
+        }
+      }
+      // 重新应用表格样式以匹配主题
+      styleTables(theme);
+    }
+
+    // 初始化
+    updateThemeIcons(savedTheme);
+
+    // ========== 副标题注入 ==========
+    const subtitleText = '2025 年是 AI 从"对话"到"执行"的转折之年';
+    if (subtitleText && subtitleText !== '2025 年是 AI 从"对话"到"执行"的转折之年') {
+      const subtitleContainer = document.getElementById('subtitle-container');
+      const subtitleTextEl = document.getElementById('subtitle-text');
+      if (subtitleContainer && subtitleTextEl) {
+        subtitleTextEl.textContent = subtitleText;
+        subtitleContainer.classList.remove('hidden');
       }
     }
 
     // ========== 阅读进度条 ==========
     const progressBar = document.getElementById('progress-bar');
-
     window.addEventListener('scroll', () => {
       const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (window.scrollY / windowHeight) * 100;
-      progressBar.style.width = scrolled + '%';
+      progressBar.style.width = Math.min(scrolled, 100) + '%';
     });
 
     // ========== 回到顶部 ==========
     const backToTop = document.getElementById('back-to-top');
-
     window.addEventListener('scroll', () => {
       if (window.scrollY > 500) {
-        backToTop.classList.remove('opacity-0', 'invisible');
-        backToTop.classList.add('opacity-100', 'visible');
+        backToTop.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+        backToTop.classList.add('opacity-100', 'visible', 'translate-y-0');
       } else {
-        backToTop.classList.add('opacity-0', 'invisible');
-        backToTop.classList.remove('opacity-100', 'visible');
+        backToTop.classList.add('opacity-0', 'invisible', 'translate-y-4');
+        backToTop.classList.remove('opacity-100', 'visible', 'translate-y-0');
       }
     });
 
@@ -1392,9 +1316,68 @@
     });
 
     // ========== 代码高亮 ==========
-    document.addEventListener('DOMContentLoaded', () => {
-      hljs.highlightAll();
+    hljs.highlightAll();
+
+    // ========== 表格样式处理（主题感知）==========
+    function styleTables(theme) {
+      const borderColor = theme === 'dark' ? 'border-slate-700' : 'border-gray-200';
+      const rowBgClass = theme === 'dark' ? 'bg-slate-800/50' : 'bg-gray-50';
+
+      document.querySelectorAll('.prose table').forEach(table => {
+        // 基础样式
+        table.classList.add('w-full', 'border-separate', 'border-spacing-0', 'overflow-hidden', 'rounded-lg', 'shadow-lg');
+
+        // 表头样式
+        const thead = table.querySelector('thead');
+        if (thead) {
+          thead.classList.add('bg-gradient-to-r', 'from-blue-600', 'to-purple-600');
+          const ths = thead.querySelectorAll('th');
+          ths.forEach(th => {
+            th.classList.add('text-white', 'font-semibold', 'px-4', 'py-3');
+          });
+        }
+
+        // 表格行样式
+        const rows = table.querySelectorAll('tbody tr');
+        rows.forEach((row, index) => {
+          // 移除旧的主题相关类
+          row.classList.remove('border-slate-700', 'border-gray-200', 'bg-slate-800/50', 'bg-gray-50');
+          // 添加新的主题相关类
+          row.classList.add('border-b', borderColor, 'last:border-b-0');
+          if (index % 2 === 0) {
+            row.classList.add(rowBgClass);
+          } else {
+            row.classList.add('bg-transparent');
+          }
+        });
+
+        // 单元格内边距
+        const cells = table.querySelectorAll('td, th');
+        cells.forEach(cell => {
+          cell.classList.add('px-4', 'py-3');
+        });
+      });
+    }
+
+    // 初始化表格样式
+    styleTables(savedTheme);
+
+    // ========== 引用块样式处理 ==========
+    document.querySelectorAll('.prose blockquote').forEach(blockquote => {
+      if (!blockquote.classList.contains('meta-info')) {
+        blockquote.classList.add('border-l-4', 'border-primary-500', 'pl-4', 'py-1', 'my-6', 'bg-slate-800/30', 'italic', 'text-slate-300');
+      }
     });
+
+    // ========== TOC 样式处理 ==========
+    const toc = document.querySelector('.toc-grid');
+    if (toc) {
+      toc.classList.add('grid', 'grid-cols-2', 'gap-2', 'sm:grid-cols-3', 'lg:grid-cols-4');
+      const links = toc.querySelectorAll('a');
+      links.forEach(link => {
+        link.classList.add('block', 'text-slate-300', 'hover:text-primary', 'transition-colors', 'py-2', 'px-4', 'rounded-lg', 'hover:bg-slate-800', 'text-sm');
+      });
+    }
   </script>
 </body>
 </html>
