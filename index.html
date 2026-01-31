@@ -130,12 +130,10 @@
         </h1>
 
         <!-- 副标题 -->
-        <div id="subtitle-container" class="hidden">
-          <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-8 animate-slide-up" style="animation-delay: 0.1s">
-            <span id="subtitle-text"></span>
-          </p>
-        </div>
-      </div>
+                <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-8 animate-slide-up" style="animation-delay: 0.1s">
+          2025 年是 AI 从"对话"到"执行"的转折之年
+        </p>
+              </div>
     </header>
 
     <!-- 主内容区 -->
@@ -148,21 +146,18 @@
           </svg>
           目录导航
         </h3>
-        <ul>
-        <li><a href="#ai-创业趋势研究报告-2025-全年">AI 创业趋势研究报告 2025 全年</a>
-        <ul>
-        <li><a href="#执行摘要">执行摘要</a></li>
-        <li><a href="#一2025-年度宏观趋势预测">一、2025 年度宏观趋势预测</a></li>
-        <li><a href="#二深度分析top-5-年度机会">二、深度分析：TOP 5 年度机会</a></li>
-        <li><a href="#三被高估-vs-被低估年度视角">三、被高估 vs 被低估（年度视角）</a></li>
-        <li><a href="#四季度预测与里程碑">四、季度预测与里程碑</a></li>
-        <li><a href="#五中国-ai-生态年度分析">五、中国 AI 生态年度分析</a></li>
-        <li><a href="#六风险预警">六、风险预警</a></li>
-        <li><a href="#七可验证预测清单">七、可验证预测清单</a></li>
-        <li><a href="#八方法论与数据来源">八、方法论与数据来源</a></li>
-        <li><a href="#九后续跟踪建议">九、后续跟踪建议</a></li>
-        </ul></li>
-        </ul>
+        <div class="toc-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem;">
+                  <li><a href="#执行摘要">执行摘要</a>
+          <li><a href="#一2025-年度宏观趋势预测">一、2025 年度宏观趋势预测</a>
+          <li><a href="#二深度分析top-5-年度机会">二、深度分析：TOP 5 年度机会</a>
+          <li><a href="#三被高估-vs-被低估年度视角">三、被高估 vs 被低估（年度视角）</a>
+          <li><a href="#四季度预测与里程碑">四、季度预测与里程碑</a>
+          <li><a href="#五中国-ai-生态年度分析">五、中国 AI 生态年度分析</a>
+          <li><a href="#六风险预警">六、风险预警</a>
+          <li><a href="#七可验证预测清单">七、可验证预测清单</a>
+          <li><a href="#八方法论与数据来源">八、方法论与数据来源</a>
+          <li><a href="#九后续跟踪建议">九、后续跟踪建议</a>
+        </div>
       </nav>
       
       <!-- 正文内容 -->
@@ -1280,17 +1275,6 @@
     // 初始化
     updateThemeIcons(savedTheme);
 
-    // ========== 副标题注入 ==========
-    const subtitleText = '2025 年是 AI 从"对话"到"执行"的转折之年';
-    if (subtitleText && subtitleText !== '2025 年是 AI 从"对话"到"执行"的转折之年') {
-      const subtitleContainer = document.getElementById('subtitle-container');
-      const subtitleTextEl = document.getElementById('subtitle-text');
-      if (subtitleContainer && subtitleTextEl) {
-        subtitleTextEl.textContent = subtitleText;
-        subtitleContainer.classList.remove('hidden');
-      }
-    }
-
     // ========== 阅读进度条 ==========
     const progressBar = document.getElementById('progress-bar');
     window.addEventListener('scroll', () => {
@@ -1367,6 +1351,11 @@
       if (!blockquote.classList.contains('meta-info')) {
         blockquote.classList.add('border-l-4', 'border-primary-500', 'pl-4', 'py-1', 'my-6', 'bg-slate-800/30', 'italic', 'text-slate-300');
       }
+    });
+
+    // ========== 隐藏元数据 blockquote ==========
+    document.querySelectorAll('.prose blockquote.meta-info').forEach(blockquote => {
+      blockquote.style.display = 'none';
     });
 
     // ========== TOC 样式处理 ==========
