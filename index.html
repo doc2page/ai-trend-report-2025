@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 创业趋势研究报告 2025 全年</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --secondary: #8b5cf6;
+      --accent: #06b6d4;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --bg-start: #1a1a2e;
+      --bg-end: #16213e;
+      --surface: #ffffff;
+      --surface-alt: #f8fafc;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box }
+
+    html { scroll-behavior: smooth }
+
+    body {
+      font-family: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      min-height: 100vh;
+      line-height: 1.7;
+      color: var(--text);
+      padding: 2rem 1rem
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto
+    }
+
+    /* Hero Header */
+    .hero {
+      text-align: center;
+      padding: 3rem 0;
+      color: white
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      margin-bottom: 2rem
+    }
+
+    .hero-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.2)
+    }
+
+    .hero-card-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent)
+    }
+
+    .hero-card-label {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      margin-top: 0.25rem
+    }
+
+    /* Main Content */
+    .main-content {
+      background: var(--surface);
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+      margin-top: 2rem
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 3rem
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary-dark)
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 1.5rem 0 1rem;
+      color: var(--text)
+    }
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1rem 0 0.5rem;
+      color: var(--text-light)
+    }
+
+    p { margin-bottom: 1rem }
+
+    strong { color: var(--primary-dark); font-weight: 600 }
+
+    /* Prediction Cards */
+    .prediction-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0
+    }
+
+    .prediction-card {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      border-radius: 16px;
+      padding: 1.5rem
+    }
+
+    .prediction-text {
+      font-weight: 600;
+      margin-bottom: 0.75rem
+    }
+
+    .prediction-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.875rem
+    }
+
+    /* Confidence Badge */
+    .confidence {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.625rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600
+    }
+
+    .confidence-C1 { background: rgba(16, 185, 129, 0.15); color: #059669 }
+    .confidence-C2 { background: rgba(59, 130, 246, 0.15); color: #2563eb }
+    .confidence-C3 { background: rgba(245, 158, 11, 0.15); color: #d97706 }
+
+    /* Opportunity Ranking */
+    .opportunity-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      box-shadow: var(--shadow)
+    }
+
+    .opportunity-table th {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 1rem;
+      font-weight: 600;
+      text-align: left
+    }
+
+    .opportunity-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .opportunity-table tr:last-child td { border-bottom: none }
+    .opportunity-table tr:nth-child(even) { background: var(--surface-alt) }
+
+    .rank-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      border-radius: 8px;
+      font-weight: 700
+    }
+
+    .score-badge {
+      font-weight: 700;
+      color: var(--primary-dark)
+    }
+
+    /* Quarter Timeline */
+    .quarter-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0
+    }
+
+    .quarter-card {
+      background: var(--surface-alt);
+      border-radius: 12px;
+      padding: 1.25rem;
+      border-left: 4px solid var(--primary)
+    }
+
+    .quarter-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem
+    }
+
+    .quarter-list {
+      list-style: none;
+      padding: 0
+    }
+
+    .quarter-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem
+    }
+
+    .quarter-list li:last-child { border-bottom: none }
+
+    /* China Companies */
+    .company-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0
+    }
+
+    .company-card {
+      background: var(--surface-alt);
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid var(--border)
+    }
+
+    .company-name {
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 0.75rem
+    }
+
+    .company-prediction {
+      font-size: 0.875rem;
+      color: var(--text-light)
+    }
+
+    /* Warning Boxes */
+    .warning-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid var(--danger);
+      padding: 1rem 1.25rem;
+      border-radius: 0 12px 12px 0;
+      margin: 1rem 0
+    }
+
+    .warning-title {
+      font-weight: 600;
+      color: var(--danger);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem
+    }
+
+    /* Comparison Grid */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0
+    }
+
+    .comparison-card {
+      padding: 1.5rem;
+      border-radius: 12px
+    }
+
+    .comparison-card.overrated {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.2)
+    }
+
+    .comparison-card.underrated {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.2)
+    }
+
+    .comparison-card-title {
+      font-weight: 600;
+      margin-bottom: 1rem
+    }
+
+    .comparison-card.overrated .comparison-card-title { color: #dc2626 }
+    .comparison-card.underrated .comparison-card-title { color: #059669 }
+
+    /* Table */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: 12px
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse
+    }
+
+    table th {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 1rem;
+      font-weight: 600;
+      text-align: left
+    }
+
+    table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem
+    }
+
+    table tr:last-child td { border-bottom: none }
+    table tr:nth-child(even) { background: var(--surface-alt) }
+
+    /* TOC */
+    .toc {
+      background: var(--surface-alt);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border)
+    }
+
+    .toc-title {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary-dark)
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.5rem
+    }
+
+    .toc a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: all 0.2s
+    }
+
+    .toc a:hover {
+      background: white;
+      color: var(--primary)
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.875rem
+    }
+
+    /* Stars Animation */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: twinkle 3s infinite
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3 }
+      50% { opacity: 1 }
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      body { padding: 1rem 0.5rem }
+      .main-content { padding: 1.5rem }
+      .hero-cards, .quarter-timeline, .comparison-grid, .company-grid { grid-template-columns: 1fr }
+      h1 { font-size: 2rem }
+    }
+  </style>
+</head>
+<body>
+  <!-- Stars Background -->
+  <div class="stars">
+    <div class="star" style="top: 10%; left: 20%"></div>
+    <div class="star" style="top: 30%; left: 80%; animation-delay: 0.5s"></div>
+    <div class="star" style="top: 50%; left: 40%; animation-delay: 1s"></div>
+    <div class="star" style="top: 70%; left: 60%; animation-delay: 1.5s"></div>
+    <div class="star" style="top: 20%; left: 70%; animation-delay: 2s"></div>
+    <div class="star" style="top: 80%; left: 30%; animation-delay: 2.5s"></div>
+  </div>
+
+  <div class="container">
+    <!-- Hero -->
+    <header class="hero">
+      <span class="hero-badge">📊 年度趋势预测报告</span>
+      <h1>AI 创业趋势 2025</h1>
+      <p class="hero-subtitle">从"对话"到"执行"的转折之年</p>
+
+      <div class="hero-cards">
+        <div class="hero-card">
+          <div class="hero-card-value">5</div>
+          <div class="hero-card-label">年度核心机会</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-value">7</div>
+          <div class="hero-card-label">可验证预测</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-value">4</div>
+          <div class="hero-card-label">季度里程碑</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- TOC -->
+      <nav class="toc">
+        <div class="toc-title">📑 目录导航</div>
+        <div class="toc-grid">
+          <a href="#predictions">年度核心预测</a>
+          <a href="#opportunities">TOP 5 机会</a>
+          <a href="#quarters">季度预测</a>
+          <a href="#comparison">被高估/低估</a>
+          <a href="#china">中国 AI 生态</a>
+          <a href="#risks">风险预警</a>
+        </div>
+      </nav>
+
+      <!-- Executive Summary -->
+      <section class="section">
+        <h2>📌 一句话总结</h2>
+        <p style="font-size: 1.125rem; color: var(--primary-dark); font-weight: 500;">
+          2025 年是 AI 从"对话"到"执行"的转折之年 — 纯模型层价值归零，价值完全迁移到"让 AI 可靠工作"的垂直基础设施。
+        </p>
+      </section>
+
+      <!-- Predictions -->
+      <section id="predictions" class="section">
+        <h2>🎯 年度核心预测（可验证）</h2>
+
+        <div class="prediction-grid">
+          <div class="prediction-card">
+            <div class="prediction-text">GPT-4 级能力完全开源，模型层无护城河</div>
+            <div class="prediction-meta">
+              置信度：<span class="confidence confidence-C1">C1</span>
+              <span>|</span>
+              验证：2025-06
+            </div>
+          </div>
+
+          <div class="prediction-card">
+            <div class="prediction-text">至少 3 家 AI 监控/评估公司被收购</div>
+            <div class="prediction-meta">
+              置信度：<span class="confidence confidence-C2">C2</span>
+              <span>|</span>
+              验证：2025-12
+            </div>
+          </div>
+
+          <div class="prediction-card">
+            <div class="prediction-text">垂直 Agent 独角兽出现（估值>$1B）</div>
+            <div class="prediction-meta">
+              置信度：<span class="confidence confidence-C2">C2</span>
+              <span>|</span>
+              验证：2025-12
+            </div>
+          </div>
+
+          <div class="prediction-card">
+            <div class="prediction-text">企业 AI 预算从"实验"转向"生产"</div>
+            <div class="prediction-meta">
+              置信度：<span class="confidence confidence-C1">C1</span>
+              <span>|</span>
+              验证：2025-Q3
+            </div>
+          </div>
+
+          <div class="prediction-card">
+            <div class="prediction-text">中国 AI 公司加速出海（监管驱动）</div>
+            <div class="prediction-meta">
+              置信度：<span class="confidence confidence-C2">C2</span>
+              <span>|</span>
+              验证：2025-12
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Opportunities -->
+      <section id="opportunities" class="section">
+        <h2>🏆 年度机会排名</h2>
+
+        <table class="opportunity-table">
+          <thead>
+            <tr>
+              <th>排名</th>
+              <th>机会</th>
+              <th>评分</th>
+              <th>窗口期</th>
+              <th>风险</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rank-badge">1</span></td>
+              <td><strong>AI 可靠性基础设施</strong><br><small>监控/评估</small></td>
+              <td><span class="score-badge">8.5/10</span></td>
+              <td>全年</td>
+              <td>中</td>
+            </tr>
+            <tr>
+              <td><span class="rank-badge">2</span></td>
+              <td><strong>垂直工作流 Agent</strong><br><small>金融/医疗/法律</small></td>
+              <td><span class="score-badge">8.2/10</span></td>
+              <td>Q1-Q3</td>
+              <td>高</td>
+            </tr>
+            <tr>
+              <td><span class="rank-badge">3</span></td>
+              <td><strong>AI 治理与合规工具</strong></td>
+              <td><span class="score-badge">7.8/10</span></td>
+              <td>Q2-Q4</td>
+              <td>中</td>
+            </tr>
+            <tr>
+              <td><span class="rank-badge">4</span></td>
+              <td><strong>企业 AI 培训与咨询</strong></td>
+              <td><span class="score-badge">7.0/10</span></td>
+              <td>全年</td>
+              <td>低</td>
+            </tr>
+            <tr>
+              <td><span class="rank-badge">5</span></td>
+              <td><strong>中国 AI 应用出海</strong></td>
+              <td><span class="score-badge">6.8/10</span></td>
+              <td>Q2-Q4</td>
+              <td>高</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Top 3 Deep Dive -->
+      <section class="section">
+        <h2>🔍 深度分析：TOP 3 机会</h2>
+
+        <h3>1. AI 可靠性基础设施</h3>
+        <p><strong>为什么是 2025 年</strong>：AI 从"辅助"转向"执行"，失败成本指数级上升；欧盟 AI Act 要求高风险 AI 系统必须可审计、可解释。</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>层级</th><th>规模</th><th>推理依据</th></tr></thead>
+            <tbody>
+              <tr><td>TAM</td><td>$25B</td><td>Gartner 预测 2027 年 AI 运维市场</td></tr>
+              <tr><td>SAM</td><td>$5B</td><td>可靠性/监控细分市场（20%）</td></tr>
+              <tr><td>SOM</td><td>$500M</td><td>早期公司 3 年内可达 10% 渗透率</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>退出策略</strong>：18-24 个月内被数据平台收购（Snowflake/Databricks），估值预期 $500M-$1.5B。</p>
+
+        <h3>2. 垂直工作流 Agent</h3>
+        <p><strong>推荐垂直</strong>：保险核保 ⭐⭐⭐⭐⭐ | 合同审查 ⭐⭐⭐⭐ | 临床决策支持 ⭐⭐⭐⭐</p>
+
+        <p><strong>窗口期警告</strong>：12-18 个月后大模型可能吸收垂直知识，需快速验证 PMF。</p>
+
+        <h3>3. AI 治理与合规工具</h3>
+        <p><strong>驱动因素</strong>：欧盟 AI Act 2025 年全面生效，企业需要证明 AI 系统合规、可审计。</p>
+        <p><strong>主要功能</strong>：AI 系统审计与报告、偏见与公平性检测、数据来源追踪、模型性能监控。</p>
+      </section>
+
+      <!-- Quarters -->
+      <section id="quarters" class="section">
+        <h2>📅 季度预测与里程碑</h2>
+
+        <div class="quarter-timeline">
+          <div class="quarter-card">
+            <div class="quarter-title">Q1 (1-3月)</div>
+            <ul class="quarter-list">
+              <li>GPT-4 级开源模型发布</li>
+              <li>YC W25 AI 公司占比 >80%</li>
+              <li>至少 1 家 AI 监控公司被收购</li>
+            </ul>
+          </div>
+
+          <div class="quarter-card">
+            <div class="quarter-title">Q2 (4-6月)</div>
+            <ul class="quarter-list">
+              <li>欧盟 AI Act 全面生效</li>
+              <li>企业 AI 预算转向生产</li>
+              <li>垂直 Agent 第一批 PMF 验证</li>
+            </ul>
+          </div>
+
+          <div class="quarter-card">
+            <div class="quarter-title">Q3 (7-9月)</div>
+            <ul class="quarter-list">
+              <li>AI 公司 IPO 窗口开放</li>
+              <li>垂直 Agent 独角兽出现</li>
+              <li>云厂商推出原生 AI 监控工具</li>
+            </ul>
+          </div>
+
+          <div class="quarter-card">
+            <div class="quarter-title">Q4 (10-12月)</div>
+            <ul class="quarter-list">
+              <li>AI 工具市场整合潮总结</li>
+              <li>开源模型达到 GPT-4.5 水平</li>
+              <li>边缘 AI 设备开始流行</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison -->
+      <section id="comparison" class="section">
+        <h2>⚖️ 被高估 vs 被低估</h2>
+
+        <div class="comparison-grid">
+          <div class="comparison-card overrated">
+            <div class="comparison-card-title">❌ 被高估（避免）</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.875rem;">
+              <li>通用 Agent 平台</li>
+              <li>AI 内容生成工具</li>
+              <li>纯模型 API 打包</li>
+              <li>"AI + X"简单组合</li>
+              <li>虚拟伴侣/情感 AI</li>
+            </ul>
+          </div>
+
+          <div class="comparison-card underrated">
+            <div class="comparison-card-title">✅ 被低估（关注）</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.875rem;">
+              <li>AI 失败修复市场</li>
+              <li>企业 AI 治理工具</li>
+              <li>AI 培训与咨询</li>
+              <li>多模型管理工具</li>
+              <li>AI 数据安全与隐私</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- China Ecosystem -->
+      <section id="china" class="section">
+        <h2>🇨🇳 中国 AI 生态年度分析</h2>
+
+        <h3>"六小虎" 2025 预测</h3>
+
+        <div class="company-grid">
+          <div class="company-card">
+            <div class="company-name">智谱AI</div>
+            <div class="company-prediction">海外 IPO 或被收购</div>
+          </div>
+          <div class="company-card">
+            <div class="company-name">月之暗面</div>
+            <div class="company-prediction">用户破亿，考虑出海</div>
+          </div>
+          <div class="company-card">
+            <div class="company-name">MiniMax</div>
+            <div class="company-prediction">出海成功，海外收入 >50%</div>
+          </div>
+          <div class="company-card">
+            <div class="company-name">阶跃星辰</div>
+            <div class="company-prediction">与大型企业合作加深</div>
+          </div>
+          <div class="company-card">
+            <div class="company-name">百川智能</div>
+            <div class="company-prediction">聚焦企业服务</div>
+          </div>
+          <div class="company-card">
+            <div class="company-name">零一万物</div>
+            <div class="company-prediction">性价比路线，下沉市场</div>
+          </div>
+        </div>
+
+        <h3>出海策略</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>市场</th><th>推荐度</th><th>理由</th></tr></thead>
+            <tbody>
+              <tr><td>东南亚</td><td>⭐⭐⭐⭐⭐</td><td>文化相近、增长快、监管较松</td></tr>
+              <tr><td>中东</td><td>⭐⭐⭐⭐</td><td>高支付意愿、政府支持</td></tr>
+              <tr><td>拉美</td><td>⭐⭐⭐⭐</td><td>增长快、竞争少</td></tr>
+              <tr><td>欧洲</td><td>⭐⭐⭐</td><td>支付意愿强、但监管严格</td></tr>
+              <tr><td>美国</td><td>⭐⭐</td><td>市场大、但竞争激烈</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Risks -->
+      <section id="risks" class="section">
+        <h2>⚠️ 风险预警</h2>
+
+        <div class="warning-box">
+          <div class="warning-title">🚨 红海预警</div>
+          <p style="font-size: 0.875rem;">客服 Agent | 代码助手 | 内容生成 | 虚拟伴侣</p>
+        </div>
+
+        <div class="warning-box">
+          <div class="warning-title">🏢 巨头预警</div>
+          <p style="font-size: 0.875rem;">OpenAI（企业监控/数据分析/垂直 Agent）| Google（多模态/搜索整合）| Microsoft（Copilot 全线）| 亚马逊（AWS 集成/电商 AI）</p>
+        </div>
+
+        <div class="warning-box">
+          <div class="warning-title">📜 监管预警</div>
+          <p style="font-size: 0.875rem;">欧盟 AI Act 全面生效 | 美国 AI 安全/隐私保护立法 | 中国算法备案/内容审核</p>
+        </div>
+      </section>
+
+      <!-- Data Sources -->
+      <section class="section">
+        <h2>📊 数据来源</h2>
+
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>来源</th><th>类型</th><th>可信度</th></tr></thead>
+            <tbody>
+              <tr><td>Gartner 2024 AI Infrastructure Report</td><td>行业报告</td><td><span class="confidence confidence-C1">A</span></td></tr>
+              <tr><td>McKinsey AI Adoption Survey 2024</td><td>行业报告</td><td><span class="confidence confidence-C1">A</span></td></tr>
+              <tr><td>MIT AI Project Failure Report</td><td>学术研究</td><td><span class="confidence confidence-C1">A</span></td></tr>
+              <tr><td>YC W25 Batch Data</td><td>一手数据</td><td><span class="confidence confidence-C1">A</span></td></tr>
+              <tr><td>36氪/晚点LatePost</td><td>媒体报道</td><td><span class="confidence confidence-C2">B</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Follow-up -->
+      <section class="section">
+        <h2>🔄 后续跟踪建议</h2>
+
+        <div class="quarter-timeline">
+          <div class="quarter-card">
+            <div class="quarter-title">Q1</div>
+            <div style="font-size: 0.875rem;">验证 Q1 预测<br>调整 Q2-Q4 预测</div>
+          </div>
+          <div class="quarter-card">
+            <div class="quarter-title">Q2</div>
+            <div style="font-size: 0.875rem;">评估监管影响<br>调整策略</div>
+          </div>
+          <div class="quarter-card">
+            <div class="quarter-title">Q3</div>
+            <div style="font-size: 0.875rem;">评估 IPO 窗口<br>M&A 活动</div>
+          </div>
+          <div class="quarter-card">
+            <div class="quarter-title">Q4</div>
+            <div style="font-size: 0.875rem;">年度总结<br>2026 预测</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>本报告由 <strong>AI 创业趋势研究 Skill v2.3.0</strong> 生成</p>
+      <p style="margin-top: 0.5rem; opacity: 0.7;">报告类型：年度趋势预测 | 生成时间：2025-01-31</p>
+    </footer>
+  </div>
+</body>
+</html>
